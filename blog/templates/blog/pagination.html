@@ -1,0 +1,12 @@
+<ul class="pager">
+    {% if page.has_previous %}
+            <li class="previous"><a href="?page={{ page.previous_page_number }}">Сюды &larr;</a></li>
+    {% endif %}
+
+    <li> <span>Страница {{ page.number }} из {{page.paginator.num_pages}}</span></li>
+
+    {% if page.has_next %}
+            <li class="next"><a href="?page={{ page.next_page_number }}">Туды &rarr;</a></li>
+    {% endif %}
+</ul>
+

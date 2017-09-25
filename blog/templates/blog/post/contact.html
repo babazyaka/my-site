@@ -1,0 +1,41 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+{% load staticfiles %}
+
+{% block title %} Contact with me {% endblock %}
+
+{% block content %}
+ <header class="intro-header" style="background-image: url({% static 'img/contact-bg.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Свяжитесь со мной</h1>
+                        <hr class="small">
+                        <span class="subheading">С удовольствием отвечу на вопросы)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% if sent %}
+                    <h1 class="text-center"> Email succesfully sent </h1>
+                {% else %}
+                    <p>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+                    <form action="." method="post">
+                        {{ form.as_p }}
+                        {% csrf_token %}
+                        <input type="submit" value="Send e-mail">
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <hr>
+{% endblock %}
