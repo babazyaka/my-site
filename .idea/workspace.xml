@@ -31,7 +31,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="142">
               <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="2" selection-end-line="133" selection-end-column="3" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
@@ -956,7 +956,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="142">
           <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="2" selection-end-line="133" selection-end-column="3" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
