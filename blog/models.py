@@ -26,12 +26,12 @@ class Post(models.Model):
                                related_name='blog_posts',
                                default=1,
                                verbose_name='Автор')
-    body = models.TextField(blank=True, verbose_name = 'Текст')
+    body = models.TextField(blank=True, verbose_name='Текст')
 
-        # RichTextUploadingField(blank=True,
-        #                           default='',
-        #                           config_name='awesome_ckeditor',
-        #                           verbose_name = 'Текст')
+    # RichTextUploadingField(blank=True,
+    #                           default='',
+    #                           config_name='awesome_ckeditor',
+    #                           verbose_name = 'Текст')
     publish = models.DateTimeField(default=timezone.now,
                                    verbose_name='Дата публикации')
     created = models.DateTimeField(auto_now_add=True,
