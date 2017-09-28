@@ -1,5 +1,4 @@
 {% extends "blog/base.html" %}
-{#{% load blog_tags %}#}
 {% load staticfiles %}
 {% load embed_video_tags %}
 
@@ -44,13 +43,13 @@
                          data-size="large" data-show-faces="true" data-share="true">
                     </div>
                     <hr>
-                    <h2>Similar posts</h2>
+                    <h2>Похожие посты</h2>
                         {% for post in similar_posts %}
                             <p>
                                 <a href="{{ post.get_absolute_url}}">{{ post.title }}</a>
                             </p>
                         {% empty %}
-                            There are no similar posts yet.
+                            Еще нет похожих постов
                         {% endfor %}
                     <br>
                     <hr>
