@@ -129,12 +129,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-# STATIC_ROOT = 'staticfiles'
-# STATIC_URL = '/static/'
-
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 
 CKEDITOR_CONFIGS = {
     'awesome_ckeditor': {
@@ -144,10 +138,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-CKEDITOR_UPLOAD_PATH = 'upload/'
-#
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/media')
-# MEDIA_URL = '/media/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
@@ -155,5 +145,4 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+

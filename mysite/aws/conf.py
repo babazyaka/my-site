@@ -1,5 +1,5 @@
 import datetime
-from decouple import Csv, config
+from decouple import config
 
 AWS_ACCESS_KEY_ID =  config("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
@@ -15,6 +15,7 @@ S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_ROOT = MEDIA_URL
 STATIC_URL = S3_URL + 'static/'
+CKEDITOR_UPLOAD_PATH = S3_URL + 'upload/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 two_months = datetime.timedelta(days=61)
