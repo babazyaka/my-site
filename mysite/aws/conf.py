@@ -1,6 +1,8 @@
 import datetime
-AWS_ACCESS_KEY_ID = "AKIAJRPNS4CRELOM6HQQ"
-AWS_SECRET_ACCESS_KEY = "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"
+from decouple import Csv, config
+
+AWS_ACCESS_KEY_ID =  config("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
 AWS_QUERYSTRING_AUTH = True
@@ -8,7 +10,7 @@ AWS_QUERYSTRING_AUTH = True
 DEFAULT_FILE_STORAGE = 'mysite.aws.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'mysite.aws.utils.StaticRootS3BotoStorage'
 AWS_STORAGE_BUCKET_NAME = 'boogie-bucket'
-S3DIRECT_REGION = 'eu-west-2 region'
+S3DIRECT_REGION = 'us-west-2 region'
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_ROOT = MEDIA_URL
