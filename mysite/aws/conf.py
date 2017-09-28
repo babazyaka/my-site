@@ -7,7 +7,7 @@ AWS_QUERYSTRING_AUTH = True
 
 DEFAULT_FILE_STORAGE = 'mysite.aws.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'mysite.aws.utils.StaticRootS3BotoStorage'
-AWS_STORAGE_BUCKET_NAME = 'boogiebazzinga-bucket'
+AWS_STORAGE_BUCKET_NAME = 'boogie-bucket'
 S3DIRECT_REGION = 'eu-west-2 region'
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
