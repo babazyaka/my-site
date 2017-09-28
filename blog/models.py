@@ -29,7 +29,7 @@ class Post(models.Model):
     body = RichTextUploadingField(blank=True,
                                   default='',
                                   config_name='awesome_ckeditor',
-                                  verbose_name = 'Текст')
+                                  verbose_name='Текст')
     publish = models.DateTimeField(default=timezone.now,
                                    verbose_name='Дата публикации')
     created = models.DateTimeField(auto_now_add=True,

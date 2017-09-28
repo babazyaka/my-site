@@ -138,6 +138,7 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+CKEDITOR_UPLOAD_PATH = 'upload/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
