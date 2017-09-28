@@ -19,12 +19,10 @@ from mysite import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^blog/', include('blog.urls',
-                           namespace='blog',
-                           app_name='blog')),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# admin.site.site_header = _("Site Administration")
-# admin.site.site_title = _("BoogieBazzinga Admin")
+                  url(r'^admin/', admin.site.urls),
+                  url(r'^grappelli/', include('grappelli.urls')),
+                  url(r'^blog/', include('blog.urls',
+                                         namespace='blog',
+                                         app_name='blog')),
+                  url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
