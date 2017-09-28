@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'embed_video',
     'django.contrib.flatpages',
     'disqus',
+    'storages',
+
 
 ]
 
