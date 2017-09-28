@@ -26,5 +26,5 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-admin.site.site_header = _("Site Administration")
-admin.site.site_title = _("BoogieBazzinga Admin")
+# admin.site.site_header = _("Site Administration")
+# admin.site.site_title = _("BoogieBazzinga Admin")
