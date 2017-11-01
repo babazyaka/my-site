@@ -18,7 +18,7 @@ class Post(models.Model):
         ('draft', 'Черновик'),
         ('published', 'Опубликовано'),
     )
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=250, verbose_name='Заголовок')
     subhead = models.CharField(max_length=250, verbose_name='Краткое описание', blank=True)
     slug = models.SlugField(max_length=250,
                             unique_for_date='publish')
