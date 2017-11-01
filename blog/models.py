@@ -5,8 +5,6 @@ from django.urls import reverse
 from taggit.managers import TaggableManager
 from ckeditor_uploader.fields import RichTextUploadingField
 from embed_video.fields import EmbedVideoField
-from autoslug import AutoSlugField
-
 
 
 class PublishedManager(models.Manager):
@@ -21,10 +19,8 @@ class Post(models.Model):
         ('published', 'Опубликовано'),
     )
     title = models.CharField(max_length=250, verbose_name='Заголовок')
-    # slug = models.SlugField(max_length=250,
-    #                         unique_for_date='publish')
-    slug = AutoSlugField(populate_from='title', unique_for_date='publish')
-
+    slug = models.SlugField(max_length=250,
+                            unique_for_date='publish')
     subhead = models.CharField(max_length=250, verbose_name='Краткое описание', blank=True)
 
     author = models.ForeignKey(User,
