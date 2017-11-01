@@ -19,9 +19,10 @@ class Post(models.Model):
         ('published', 'Опубликовано'),
     )
     title = models.CharField(max_length=250, verbose_name='Заголовок')
-    subhead = models.CharField(max_length=250, verbose_name='Краткое описание', blank=True)
     slug = models.SlugField(max_length=250,
                             unique_for_date='publish')
+    subhead = models.CharField(max_length=250, verbose_name='Краткое описание', blank=True)
+
     author = models.ForeignKey(User,
                                related_name='blog_posts',
                                default=1,
@@ -46,13 +47,13 @@ class Post(models.Model):
     video = EmbedVideoField(blank=True,
                             verbose_name='Видео')
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         ordering = ('-publish',)
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
-
-    def __str__(self):
-        return self.title
 
     def get_absolute_url(self):
         return reverse('blog:post_detail',
